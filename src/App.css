@@ -1,13 +1,27 @@
 body {
   margin: 0;
-  background-color: #F6F5F2;
+  background-color: #93a099;
 }
 
-.header {
+.appContainer {
   background-image: url(salmon-salad.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 70vh;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  position: absolute;
+  background-color: #f6f5f2;
+  margin-top: 250px;
+  width: 90%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  align-self: center;
 }
 
 .container {
@@ -120,8 +134,18 @@ li {
   color: #361706;
 }
 
+@media all and (max-width: 800px) {
+  .main {
+    margin-top: 170px;
+  }
+}
+
 
 @media all and (max-width: 500px) {
+  .main {
+    margin-top: 170px;
+  }
+
   h1 {
     font-size: 25px;
   }

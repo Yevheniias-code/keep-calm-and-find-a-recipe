@@ -32,32 +32,31 @@ function App() {
 
   return (
     <div className='appContainer'>
-    <div className='header'>
-        <div className='container, motivationLine'>
-            <p>Keep calm and just cook</p>
+      <div className='container, motivationLine'>
+        <p>Keep calm and just cook</p>
+      </div>
+
+      <div className='main'>
+        <div className='container'>
+          <h1>What would you like to cook</h1>
         </div>
-    </div>
 
-      <div className='container'>
-        <h1>What would you like to cook</h1>
-      </div>
+        <div className='container '>
+          <form className='inputContainer' onSubmit={finalSearch}>
+            <input className='search' placeholder='Find a recipe...' onChange={myRecipeSearch} value={mySearch} />
+            <button><img src={icon} width='23px' alt='search item'/></button>
+          </form>
+        </div>
 
-      <div className='container '>
-        <form className='inputContainer' onSubmit={finalSearch}>
-          <input className='search' placeholder='Find a recipe...' onChange={myRecipeSearch} value={mySearch} />
-          <button><img src={icon} width='23px' alt='search item'/></button>
-        </form>
-      </div>
-
-      <div className='recipesContainer'>
-        {myRecipe.map((item, index) => (
-          <RecipesComponent key={index}
-          label={item.recipe.label}
-          image={item.recipe.image}
-          calories={item.recipe.calories}
-          ingredients={item.recipe.ingredientLines}
-          />
-          ))}
+        <div className='recipesContainer'>
+          {myRecipe.map((item, index) => (
+            <RecipesComponent key={index}
+            label={item.recipe.label}
+            image={item.recipe.image}
+            calories={item.recipe.calories}
+            ingredients={item.recipe.ingredientLines} />
+            ))}
+          </div>
         </div>
     </div>
   );
