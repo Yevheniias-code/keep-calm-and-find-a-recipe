@@ -38,12 +38,12 @@ function App() {
 
       <div className='main'>
         <div className='container'>
-          <h1>What would you like to cook</h1>
+          <h1>What would you like to cook today?</h1>
         </div>
 
         <div className='container '>
           <form className='inputContainer' onSubmit={finalSearch}>
-            <input className='search' placeholder='Find a recipe...' onChange={myRecipeSearch} value={mySearch} />
+            <input className='search' placeholder='Enter the name of the recipe or the ingridients...' onChange={myRecipeSearch} value={mySearch} />
             <button><img src={icon} width='23px' alt='search item'/></button>
           </form>
         </div>

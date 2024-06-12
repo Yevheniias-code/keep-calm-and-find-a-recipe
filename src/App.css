@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #93a099;
+  background-color: #8fc3b6;
 }
 
 .appContainer {
@@ -75,7 +75,6 @@ button:hover {
   width: 400px;
   padding: 5px;
   font-family: "Roboto", sans-serif;
-  font-size: 19px;
   color: #361706;
   border: none;
   font-style: italic;
